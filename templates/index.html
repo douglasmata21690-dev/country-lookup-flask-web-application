@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Country Page</title>
+    <link href="{{url_for( 'static', filename='styles/style.css')}}" rel="stylesheet">
+  </head>
+  <body>
+    <div>
+      <h1 class="title">Country Lookup</h1>
+      <h2 class="subheading"> Find information for 120+ countries. Updated daily!</h2>
+    </div>
+
+
+    <div class="search-container">
+      <form>
+        <input type="text" autocomplete="off" id="search" name="country" placeholder="Search for your country here" list="country-options">
+        <!--<input type= "submit" id="submit">-- submit button is not needed since the search is dynamic and does not require a page refresh -->
+      </form>
+
+        <div id="country-menu">
+          <ul id="results-dropdown" class="dropdown-content">
+            
+        </ul>
+      </div>
+    </div>
+    
+      <script src="{{url_for( 'static', filename='script.js')}}"></script>
+  </body>
+</html>
+
+

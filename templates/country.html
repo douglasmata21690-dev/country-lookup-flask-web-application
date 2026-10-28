@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{name}} Info</title>
+    <link href="{{url_for( 'static', filename='styles/style.css')}}" rel="stylesheet">
+  </head>
+  <body>
+      <h1 class="title">Let's learn about {{ name }}. </h1>
+      <div class="container">
+      <div id="flag-wrapper">
+        <img src="{{ flag_url }}" width=300 height=175 id="flag">
+        <p id="caption">{{ flag_description }}</p>
+      </div>
+
+
+      <div id="country-info-wrapper">
+        <p id="country-info">
+        <b>Capital:</b> {{ capital }} <br>
+        <b>Continent:</b> {{ continent }}<br>
+        They drive on the <b>{{ driving_side }}</b> side.<br>
+        <b>Government:</b> {{ gov_type }}<br>
+        </p>
+      </div>
+      </div>
+
+    
+      <script src="{{url_for( 'static', filename='script.js')}}"></script>
+  </body>
+</html>
